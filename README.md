@@ -6,36 +6,19 @@
   <h1>Bunniecode</h1>
 
   <p>
-    <strong>WordPress &amp; WooCommerce plugins, engineered in Europe.</strong>
+    <strong>WordPress and WooCommerce plugins, built in Europe.</strong>
   </p>
 
   <p>
-    We build commercial and open-source plugins for online stores<br />
-    that take security, performance, and code quality seriously.
+    <a href="https://bunniecode.eu"><strong>bunniecode.eu</strong></a>
   </p>
 
   <p>
-    <a href="https://bunniecode.eu"><strong>Website</strong></a>
-    &nbsp;·&nbsp;
-    <a href="https://bunniecode.eu/plugins">Plugins</a>
-    &nbsp;·&nbsp;
-    <a href="https://bunniecode.eu/docs">Documentation</a>
-    &nbsp;·&nbsp;
-    <a href="https://bunniecode.eu/contact">Get in touch</a>
-  </p>
-
-  <p>
-    <a href="https://bunniecode.eu">
-      <img alt="Website" src="https://img.shields.io/badge/bunniecode.eu-0A0A0A?style=flat-square&logo=safari&logoColor=white" />
-    </a>
-    <a href="https://wordpress.org/plugins/">
-      <img alt="WordPress" src="https://img.shields.io/badge/WordPress-21759B?style=flat-square&logo=wordpress&logoColor=white" />
-    </a>
-    <a href="https://woocommerce.com/products/">
-      <img alt="WooCommerce" src="https://img.shields.io/badge/WooCommerce-7F54B3?style=flat-square&logo=woocommerce&logoColor=white" />
-    </a>
-    <img alt="GDPR" src="https://img.shields.io/badge/GDPR-Compliant-1E7E34?style=flat-square" />
-    <img alt="Made in EU" src="https://img.shields.io/badge/Made%20in-EU-003399?style=flat-square" />
+    <img alt="WordPress" src="https://img.shields.io/badge/WordPress-21759B?style=flat-square&logo=wordpress&logoColor=white" />
+    <img alt="WooCommerce" src="https://img.shields.io/badge/WooCommerce-7F54B3?style=flat-square&logo=woocommerce&logoColor=white" />
+    <img alt="PHP" src="https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white" />
+    <img alt="License: GPL-2.0-or-later" src="https://img.shields.io/badge/License-GPL--2.0--or--later-3D3D3D?style=flat-square" />
+    <img alt="Made in the EU" src="https://img.shields.io/badge/Made%20in-EU-003399?style=flat-square" />
   </p>
 </div>
 
@@ -43,92 +26,54 @@
 
 ## About
 
-Bunniecode is a European studio focused on a single discipline: **WordPress and WooCommerce plugin development**. We don't build sites, we don't run agencies — we ship plugins.
+Bunniecode is a European studio that builds plugins for WordPress and WooCommerce stores, and nothing else.
+We sell commercial WooCommerce extensions, release free plugins under the GPL, and build custom plugins for agencies and product teams.
 
-Our work covers commercial extensions for store owners, free utilities for the community, and white-label plugin development for agencies and product teams.
+## Products
 
-## What we build
-
-**Commercial plugins.** Premium WooCommerce extensions for payments, shipping, checkout, subscriptions, marketing, and store operations — distributed through [bunniecode.eu/plugins](https://bunniecode.eu/plugins) with priority support and a documented update cycle.
-
-**Open-source plugins.** GPL-licensed utilities for the WordPress community, published here on GitHub and on the [WordPress.org Plugin Directory](https://wordpress.org/plugins/).
-
-**White-label plugin development.** Bespoke plugins built for agencies, SaaS vendors, and product companies who need custom WooCommerce functionality under their own brand.
-
-## Engineering standards
-
-We hold every plugin — paid, free, or white-label — to the same standards:
-
-- **WordPress Coding Standards** enforced via PHPCS in CI
-- **PHPUnit** unit tests and WP integration tests on every release
-- **PHP 8.1+** with strict types and typed properties
-- **Semantic Versioning** with a maintained `CHANGELOG.md` per repo
-- **WCAG 2.1 AA** accessibility on customer-facing UI
-- **GDPR-aware** data handling and documented data flows
-- **Reproducible builds** via Composer, npm, and GitHub Actions
-- **Backward compatibility** policy of N−2 minor versions of WordPress and WooCommerce
-
-## Tech stack
-
-`PHP` · `MySQL` · `JavaScript` · `TypeScript` · `React` (block editor) · `WordPress` · `WooCommerce` · `Composer` · `npm` · `WP-CLI` · `PHPUnit` · `Playwright` · `GitHub Actions`
-
-## Where to find our plugins
-
-| Channel | What lives there |
+| Plugin | What it does |
 |---|---|
-| 📌 **Pinned below** | Our most active open-source plugins and developer tools |
-| 💎 [bunniecode.eu/plugins](https://bunniecode.eu/plugins) | Premium WooCommerce extensions, licensing, priority support |
-| 🔌 [WordPress.org Plugin Directory](https://wordpress.org/plugins/) | Free plugins published to the official directory |
-| 📖 [bunniecode.eu/docs](https://bunniecode.eu/docs) | Installation guides, API references, and recipes |
+| [Advanced COD for WooCommerce](https://github.com/bunnie-code/bnc-advanced-cod-about) | Rules and fees for cash on delivery by order value, location, shipping zone or class, and customer type. |
+| Checkout Logger for WooCommerce | Records why checkouts fail: validation errors, payment failures, expired sessions and front-end errors. |
+
+Commercial plugins are sold through [bunniecode.eu](https://bunniecode.eu). A licence key gives access to updates and support.
+
+## How we build
+
+Every plugin, commercial or free, follows the same rules:
+
+- WordPress and WooCommerce public APIs only: no core edits and no direct writes to core tables.
+- Orders through the WooCommerce CRUD API, compatible with High-Performance Order Storage (HPOS).
+- Input sanitized, output escaped, every SQL query prepared, every privileged action checked for capability and nonce.
+- Settings, data and hooks of existing installs are kept across updates.
+- Semantic Versioning, with a changelog for every release.
+- "Tested up to" versions are versions we have tested.
+- GPL v2 or later, like WordPress itself.
 
 ## Support
 
-| Type of request | Where to send it |
+| Request | Where to send it |
 |---|---|
-| Bug report on an open-source plugin | GitHub Issues on the relevant repository |
-| Feature request | GitHub Discussions or Issues on the relevant repository |
-| Premium plugin support | Customer area at [bunniecode.eu](https://bunniecode.eu) |
-| White-label or custom plugin inquiry | [bunniecode.eu/contact](https://bunniecode.eu/contact) |
-
-Premium customers receive prioritized response times and direct access to plugin maintainers through the customer area.
-
-## Contributing
-
-Open-source contributions are welcome. Before opening a pull request:
-
-1. Open an issue first to discuss the change
-2. Fork the repo and branch from `main`
-3. Match existing code style — PHPCS runs in CI
-4. Add or update tests for your change
-5. Update `CHANGELOG.md` under `[Unreleased]`
-
-```bash
-git clone https://github.com/bunnie-code/<repo>.git
-cd <repo>
-composer install
-git checkout -b feature/<short-name>
-# make changes, run tests
-composer test
-git commit -m "feat: short, imperative summary"
-git push origin feature/<short-name>
-```
-
-See [`CONTRIBUTING.md`](https://github.com/bunnie-code/.github/blob/main/CONTRIBUTING.md) for full guidelines.
+| Bug in one of our public repositories | GitHub Issues on that repository |
+| Help with a commercial plugin | [bunniecode.eu](https://bunniecode.eu) |
+| Custom or white-label plugin | [bunniecode.eu](https://bunniecode.eu) |
 
 ## Security
 
-If you discover a vulnerability in any of our plugins, please use **[GitHub's private vulnerability reporting](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability)** on the affected repository, or the disclosure form at [bunniecode.eu/security](https://bunniecode.eu/security).
+Report vulnerabilities privately through [GitHub's private vulnerability reporting](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability) on the affected repository.
+Please do not open a public issue for a security problem. We credit responsible disclosure.
 
-Please do not open public issues for security matters. Responsible disclosure is appreciated and credited.
+## Contributing
+
+Issues and pull requests are welcome on our public repositories.
+Open an issue to discuss a change before you send a pull request, and follow the [WordPress Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/).
 
 ## License
 
-Open-source plugins are released under **GPL v2 or later**, matching WordPress core. Commercial plugins ship under the Bunniecode EULA — see individual product pages on [bunniecode.eu/plugins](https://bunniecode.eu/plugins) for terms.
+All Bunniecode plugins, commercial ones included, are licensed under the [GNU General Public License v2 or later](https://www.gnu.org/licenses/gpl-2.0.html).
 
 ---
 
 <div align="center">
-  <sub>
-    Built in 🇪🇺 Europe · <a href="https://bunniecode.eu">bunniecode.eu</a>
-  </sub>
+  <sub>Built in Europe · <a href="https://bunniecode.eu">bunniecode.eu</a></sub>
 </div>
